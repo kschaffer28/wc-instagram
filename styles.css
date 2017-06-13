@@ -155,11 +155,43 @@ img {
 }
 
 .link:before {
-    content: "🍺🍺🍺🍺🍺"
+    content: "🍺🍺"
 }
 
 .link:after {
-    content: "🍺🍺🍺🍺🍺"
+    content: "🍺🍺"
+}
+
+@media(max-width: 1000px) {
+    .inner {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+
+@media(max-width: 630px) {
+   .images .inner {
+    -ms-grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+
+.profile .inner {
+    flex-direction: column;
+} 
+
+.profile_image {
+    width: 100px;
+    height: 100px;
+    flex: 0 0 100px;
+}
+
+.profile_info {
+
+    
+    }
+
 }
 
 /*.profile {}*/
