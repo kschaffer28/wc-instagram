@@ -23,6 +23,22 @@ body {
     
 }
 
+
+.images .inner {
+    flex-wrap: wrap;
+}
+@supports(display:grid) {
+.images .inner {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    max-width: 100%;
+    }
+}
+
+
 header {
     background: lightblue;
     padding: 1em 0;
@@ -49,7 +65,17 @@ header {
     overflow: hidden;
     width: 200px;
     height: 200px;
+    flex: 0 0 auto;
+    
 }
+
+.profile_info {
+
+    flex: 1 1 auto;
+    margin-left: 2em;
+    font-family: 'Monda', sans-serif;
+}
+
 
 .button--blue {
     color: orangered;
@@ -59,6 +85,17 @@ header {
     border-color:1px solid #4090db
    /* border-radius: 4px; */
     
+}
+
+.profile_meta {
+    display: flex;
+    list-style: none;
+    padding: 0;
+   flex-wrap: wrap;
+}
+
+.profile_meta li {
+    margin-right: 2em;
 }
 
 .flexcontainer {
